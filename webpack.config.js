@@ -1,5 +1,5 @@
 module.exports = {
-    entry: './public/app.js',
+    entry: './public/renderdom.js',
     output: { path: __dirname+'/public/', filename: 'bundle.js' },
     module: {
         rules: [
