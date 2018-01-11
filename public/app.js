@@ -3,10 +3,18 @@ var connect = require('react-redux').connect;
 
 var Header = require('./components/header.js');
 var StudentListX = require('./components/studentlist.js');
+var AddStudentXForm = require('./components/addstudent.js');
 
 class App extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.submit = this.submit.bind(this);
+    }
+    submit(newstudent){
+        console.log("this.state.newstudent", newstudent.name);
+        if (newstudent.name != undefined && newstudent.lastname != undefined) {
+            this.props.handleChange(newstudent);
+        }
     }
     render() {
         return (
@@ -20,9 +28,7 @@ class App extends React.Component {
                             <div className="mui-col-md-6 mui-col-md-offset-3">
                                 <div className="mui--appbar-height"></div>
                                 <h1>Ma liste d'élèves</h1>
-                                <div id="addStudent">
-                                    <p onClick={this.props.onIncreaseStudent}>Increase</p>
-                                </div>
+                                <AddStudentXForm onSubmit={this.submit}/>
                                 <StudentListX/>
                             </div>
                         </div>
@@ -47,8 +53,8 @@ module.exports = AppX;
 //Dispatch
 function mapDispatchToProps(dispatch) {
     return {
-        onIncreaseStudent: function() {
-            dispatch( {type: 'increaseStudent'} )
+        handleChange: function(newstudent) {
+            dispatch({type: "addstudent", newstudent: newstudent});
         }
     }
 }

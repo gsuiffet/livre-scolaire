@@ -1,6 +1,8 @@
-function student(state = {}, action) {
-    if(action.type == 'increaseStudent') {
-        return state +1
+function student(state = [], action) {
+    if(action.type == 'addstudent') {
+        var allStudent = state.slice(0);
+        allStudent.push(action.newstudent);
+        return allStudent
     } else {
         return state
     }
