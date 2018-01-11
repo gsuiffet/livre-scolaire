@@ -1,4 +1,5 @@
 module.exports = {
+    devtool: 'cheap-eval-source-map',
     entry: './public/renderdom.js',
     output: { path: __dirname+'/public/', filename: 'bundle.js' },
     module: {

@@ -1,4 +1,4 @@
-function student(state = 0, action) {
+function student(state = {}, action) {
     if(action.type == 'increaseStudent') {
         return state +1
     } else {

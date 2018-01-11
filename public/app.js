@@ -1,6 +1,7 @@
 var React = require('react');
 var connect = require('react-redux').connect;
 
+var Header = require('./components/header.js');
 var StudentListX = require('./components/studentlist.js');
 
 class App extends React.Component {
@@ -11,27 +12,12 @@ class App extends React.Component {
         return (
             <div>
                 <header className="mui-appbar mui--z1">
-                    <div className="mui-container">
-                        <table>
-                            <tbody className="mui--appbar-height">
-                                <tr>
-                                    <td className="mui--text-title" id="logo">Le Livre Scolaire</td>
-                                    <td className="mui--text-right">
-                                        <ul className="mui-list--inline mui--text-body2">
-                                            <li><a href="#">Exercices</a></li>
-                                            <li><a href="#">Elèves</a></li>
-                                            <li><a href="#">Classes</a></li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <Header/>
                 </header>
                 <div id="content-wrapper">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-6 mui-col-md-offset-3">
+                    <div className="mui-container-fluid">
+                        <div className="mui-row">
+                            <div className="mui-col-md-6 mui-col-md-offset-3">
                                 <div className="mui--appbar-height"></div>
                                 <h1>Ma liste d'élèves</h1>
                                 <div id="addStudent">
