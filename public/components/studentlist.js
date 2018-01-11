@@ -1,26 +1,26 @@
 var React = require('react');
 var connect   = require('react-redux').connect;
 
-class Dashboard extends React.Component {
+class StudentList extends React.Component {
     constructor() {
         super();
     }
     render() {
         return (
             <div>
-                <h1>Dashboard</h1>
+                <h2>Liste</h2>
                 <span>Compteur : {this.props.student}</span>
             </div>
         );
     }
 }
 
-var DashboardX = connect(
+var StudentListX = connect(
     mapStateToProps,
     null
-)(Dashboard);
+)(StudentList);
 
-module.exports = DashboardX;
+module.exports = StudentListX;
 
 //State
 function mapStateToProps(state) {
