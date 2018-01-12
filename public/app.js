@@ -11,7 +11,6 @@ class App extends React.Component {
         this.submit = this.submit.bind(this);
     }
     submit(newstudent){
-        console.log("this.state.newstudent", newstudent.name);
         if (newstudent.name != undefined && newstudent.lastname != undefined) {
             this.props.handleChange(newstudent);
         }

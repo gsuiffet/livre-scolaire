@@ -11,13 +11,19 @@ function student(state = [], action) {
     }
     if(action.type == 'deleteStudent') {
         var allStudent = state.slice(0);
-        var resetId = 0;
-        for(var i=0; i<state.length; i++ ) {
-            allStudent[i].id = resetId++;
-            console.log("allStudent",allStudent);
+        for(var i=0; i<allStudent.length; i++ ) {
             if (state[i].id = action.id) {
                 i = state[i].id;
                 allStudent.splice(i, 1);
+                for(var j=0; j<allStudent.length; j++ ) {
+                    allStudent[j].id = j
+                }
+                return allStudent
+            } else {
+                allStudent.splice(0, 1);
+                for(var j=0; j<allStudent.length; j++ ) {
+                    allStudent[j].id = j
+                }
                 return allStudent
             }
         }
