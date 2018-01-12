@@ -99,6 +99,11 @@ table {
     height: 10px;
 }
 
+#delete {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
 #name, #inputName {
     margin-left: -15px;
 }

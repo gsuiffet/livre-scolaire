@@ -1,5 +1,7 @@
 var React = require('react');
 
+var reset = require('redux-form').reset;
+
 var reduxForm = require('redux-form').reduxForm;
 var Field = require('redux-form').Field;
 
@@ -7,8 +9,9 @@ class AddStudent extends React.Component {
     constructor() {
         super();
     }
+
     render() {
-        return (
+            return (
             <div id="addStudent">
                 <form onSubmit={this.props.handleSubmit} className="mui-form--inline">
                     <label>
@@ -48,8 +51,12 @@ class AddStudent extends React.Component {
     }
 }
 
+const afterSubmit = (result, dispatch) =>
+    dispatch(reset('addStudent'));
+
 var AddStudentXForm = reduxForm({
     form: 'addStudent',
+    onSubmitSuccess: afterSubmit,
 })(AddStudent);
 
 module.exports = AddStudentXForm;

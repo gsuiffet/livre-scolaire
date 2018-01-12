@@ -16,30 +16,35 @@ var initialize = [
         lastname: "Paul",
         password: "8856",
         level: "2",
+        id: 0
     },
     {
         name: "Pierre",
         lastname: "Jean",
         password: "6436",
         level: "1",
+        id: 1
     },
     {
         name: "Sophie",
         lastname: "Gala",
         password: "0921",
         level: "2",
+        id: 2
     },
     {
         name: "Abdel",
         lastname: "Bela",
         password: "0921",
         level: "2",
+        id: 3
     },
     {
         name: "Marina",
         lastname: "Rolland",
         password: "6754",
         level: "2",
+        id: 4
     }
 ];
 

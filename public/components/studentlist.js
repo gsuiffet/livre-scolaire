@@ -4,6 +4,10 @@ var connect   = require('react-redux').connect;
 class StudentList extends React.Component {
     constructor() {
         super();
+        this.handleClick = this.handleClick.bind(this);
+    }
+    handleClick(id) {
+        this.props.handleSelectedStudent(id);
     }
     render() {
         var StudentList = [];
@@ -43,7 +47,7 @@ class StudentList extends React.Component {
                             </div>
                             <div className="mui-col-xs-6 mui-col-md-6">
                                 <div id="delete">
-                                    <span><p>X</p></span>
+                                    <i onClick={this.handleClick.bind(this, this.props.student[i].id)} className="fa fa-trash" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
@@ -66,7 +70,7 @@ class StudentList extends React.Component {
 
 var StudentListX = connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(StudentList);
 
 module.exports = StudentListX;
@@ -74,4 +78,13 @@ module.exports = StudentListX;
 //State
 function mapStateToProps(state) {
     return {student: state.student}
+}
+
+//Dispatch
+function mapDispatchToProps(dispatch) {
+    return {
+        handleSelectedStudent: function(id) {
+            dispatch({type: "deleteStudent", id:id});
+        }
+    }
 }
