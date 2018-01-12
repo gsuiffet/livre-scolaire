@@ -5,9 +5,14 @@ class StudentList extends React.Component {
     constructor() {
         super();
         this.handleClick = this.handleClick.bind(this);
+        this.handleClickUpdate = this.handleClickUpdate.bind(this);
     }
     handleClick(id) {
         this.props.handleSelectedStudent(id);
+    }
+    handleClickUpdate(id) {
+        console.log(id);
+        //this.props.handleSelectedStudent(id);
     }
     render() {
         var StudentList = [];
@@ -42,7 +47,7 @@ class StudentList extends React.Component {
                         <div className="mui-col-xs-4 mui-col-md-4">
                             <div className="mui-col-xs-6 mui-col-md-6">
                                 <div id="update">
-                                    <span><p>Modifier</p></span>
+                                    <span><i onClick={this.handleClickUpdate.bind(this, this.props.student[i].id)} className="fa fa-pencil-square" aria-hidden="true"></i></span>
                                 </div>
                             </div>
                             <div className="mui-col-xs-6 mui-col-md-6">

@@ -94,12 +94,12 @@ table {
  * Content CSS List
  */
 
-#name, #lastname, #password, #level, #update, #delete {
+#name, #lastname, #password, #level, #update, #delete, #update {
     margin: 15px;
     height: 10px;
 }
 
-#delete {
+#delete, #update {
     font-size: 18px;
     margin-top: 10px;
 }
