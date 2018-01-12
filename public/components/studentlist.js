@@ -1,19 +1,19 @@
 var React = require('react');
 var connect   = require('react-redux').connect;
+var UpdateStudentXForm = require('./updatestudent.js');
 
 class StudentList extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.handleClick = this.handleClick.bind(this);
-        this.handleClickUpdate = this.handleClickUpdate.bind(this);
+        this.submit = this.submit.bind(this);
     }
     handleClick(id) {
         this.props.handleSelectedStudent(id);
     }
-    handleClickUpdate(id) {
-        console.log(id);
-        //this.props.handleSelectedStudent(id);
-    }
+    submit(values){
+        this.props.handleSelectedStudentUpdate(values);
+    };
     render() {
         var StudentList = [];
         for (var i=0; i<this.props.student.length; i++ ) {
@@ -46,9 +46,7 @@ class StudentList extends React.Component {
                         </div>
                         <div className="mui-col-xs-4 mui-col-md-4">
                             <div className="mui-col-xs-6 mui-col-md-6">
-                                <div id="update">
-                                    <span><i onClick={this.handleClickUpdate.bind(this, this.props.student[i].id)} className="fa fa-pencil-square" aria-hidden="true"></i></span>
-                                </div>
+                                <UpdateStudentXForm student={this.props.student[i]} onSubmit={this.submit}/>
                             </div>
                             <div className="mui-col-xs-6 mui-col-md-6">
                                 <div id="delete">
@@ -90,6 +88,9 @@ function mapDispatchToProps(dispatch) {
     return {
         handleSelectedStudent: function(id) {
             dispatch({type: "deleteStudent", id:id});
+        },
+        handleSelectedStudentUpdate: function(id) {
+            dispatch({type: "updateStudent", id:id});
         }
     }
 }

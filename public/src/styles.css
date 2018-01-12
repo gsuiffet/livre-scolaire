@@ -113,6 +113,19 @@ table {
 }
 
 /**
+ * Content CSS Modal
+ */
+.updateStudent {
+    height: 46%;
+}
+
+#inputSubmitModal {
+    background-color: #00EBC5;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/**
  * Footer CSS
  */
 footer {
@@ -122,4 +135,18 @@ footer {
     border-top: 1px solid #e0e0e0;
     padding-top: 35px;
     margin-top:25px;
+}
+
+/* Smartphones in landscape mode (480-768px) */
+@media only screen and ( min-width: 480px) and ( max-width: 600px) {
+    .updateStudent {
+        height: 80%;
+    }
+}
+
+/* Smartphones in portrait mode (0-479px) */
+@media only screen and ( max-width: 479px) {
+    .updateStudent {
+        height: 80%;
+    }
 }

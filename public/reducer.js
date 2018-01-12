@@ -33,6 +33,31 @@ function student(state = [], action) {
                 return allStudent
             }
         }
+    }
+    if (action.type == 'updateStudent') {
+        var allStudent = state.slice(0);
+        for(var i=0; i<allStudent.length; i++ ) {
+            if (allStudent[i].id = action.id.id) {
+                i = allStudent[i].id;
+                allStudent[i].name = action.id.name;
+                allStudent[i].lastname = action.id.lastname;
+                allStudent[i].password = action.id.password;
+                allStudent[i].level = action.id.level;
+                for(var j=0; j<allStudent.length; j++ ) {
+                    allStudent[j].id = j
+                }
+                return allStudent
+            } else {
+                allStudent[0].name = action.id.name;
+                allStudent[0].lastname = action.id.lastname;
+                allStudent[0].password = action.id.password;
+                allStudent[0].level = action.id.level;
+                for(var j=0; j<allStudent.length; j++ ) {
+                    allStudent[j].id = j
+                }
+                return allStudent
+            }
+        }
     } else {
         return state
     }
