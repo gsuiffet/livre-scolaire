@@ -9,13 +9,20 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.submit = this.submit.bind(this);
+        this.state = {};
     }
     submit(newstudent){
-        if (newstudent.name != undefined && newstudent.lastname != undefined) {
+        if (newstudent.name != undefined) {
             this.props.handleChange(newstudent);
+            this.setState({ show: false });
+        } else {
+            this.setState({ show: true });
         }
     }
     render() {
+        if (this.state.show) {
+            var required = <div className="mui--text-accent mui--text-body1">*Prénom est obligatoire</div>;
+        }
         return (
             <div>
                 <header className="mui-appbar mui--z1">
@@ -28,6 +35,7 @@ class App extends React.Component {
                                 <div className="mui--appbar-height"></div>
                                 <h1>Ma liste d'élèves</h1>
                                 <AddStudentXForm onSubmit={this.submit}/>
+                                {required}
                                 <StudentListX/>
                             </div>
                         </div>

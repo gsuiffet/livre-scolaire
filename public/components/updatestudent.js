@@ -34,30 +34,35 @@ class UpdateStudent extends React.Component {
                     </a>
                     <form onSubmit={this.props.handleSubmit} className="mui-form--inline">
                         <label>
-                                <div className="mui-col-md-6">
-                                    <div className="mui-textfield">
-                                        <Field type="text" name="name" placeholder="Prenom" component="input"/>
-                                    </div>
-                                    <div className="mui-textfield">
-                                        <Field type="text" name="lastname" placeholder="Nom" component="input"/>
+                            <div className="mui-col-md-6">
+                                <div className="mui-textfield">
+                                    <Field type="text" name="name" placeholder="Prenom" component="input"/>
+                                </div>
+                                <div className="mui-textfield">
+                                    <Field type="text" name="lastname" placeholder="Nom" component="input"/>
+                                </div>
+                            </div>
+                            <div className="mui-col-md-6">
+                                <div className="mui-textfield">
+                                    <Field type="number" name="password" placeholder="Code" component="input"/>
+                                </div>
+                                <div className="mui-select">
+                                    <Field type="text" name="level" placeholder="Niveau" component="select">
+                                        <option>Rang</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </Field>
+                                    <Field type="hidden" name="id" component="input"/>
+                                </div>
+                            </div>
+                            <div className="mui-col-md-12">
+                                <div className="mui-row">
+                                    <div className="mui-col-md-6 mui-col-md-offset-3">
+                                        <button type="submit" value="Save" id="inputSubmitModal" className="mui-btn" onClick={this.close.bind(this)}>Modifier</button>
                                     </div>
                                 </div>
-                                <div className="mui-col-md-6">
-                                    <div className="mui-textfield">
-                                        <Field type="text" name="password" placeholder="Mdp" component="input"/>
-                                    </div>
-                                    <div className="mui-textfield">
-                                        <Field type="text" name="level" placeholder="Niveau" component="input"/>
-                                        <Field type="hidden" name="id" component="input"/>
-                                    </div>
-                                </div>
-                                <div className="mui-col-md-12">
-                                    <div className="mui-row">
-                                        <div className="mui-col-md-6 mui-col-md-offset-3">
-                                            <button type="submit" value="Save" id="inputSubmitModal" className="mui-btn" onClick={this.close.bind(this)}>Modifier</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            </div>
                         </label>
                     </form>
                 </Modal>

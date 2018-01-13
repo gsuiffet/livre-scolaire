@@ -1,7 +1,5 @@
 var React = require('react');
-
 var reset = require('redux-form').reset;
-
 var reduxForm = require('redux-form').reduxForm;
 var Field = require('redux-form').Field;
 
@@ -9,7 +7,6 @@ class AddStudent extends React.Component {
     constructor() {
         super();
     }
-
     render() {
             return (
             <div id="addStudent">
@@ -31,12 +28,17 @@ class AddStudent extends React.Component {
                             <div className="mui-col-xs-4 mui-col-md-4">
                                 <div className="mui-col-xs-6 mui-col-md-6">
                                     <div className="mui-textfield">
-                                        <Field type="text" name="password" id="inputPassword" placeholder="Mdp" component="input"/>
+                                        <Field type="number" name="password" id="inputPassword" placeholder="Code" component="input"/>
                                     </div>
                                 </div>
                                 <div className="mui-col-xs-6 mui-col-md-6">
-                                    <div className="mui-textfield">
-                                        <Field type="text" name="level" id="inputLevel" placeholder="Niveau" component="input"/>
+                                    <div className="mui-select">
+                                        <Field type="text" name="level"  id="inputLevel" placeholder="Niveau" component="select">
+                                            <option>Rang</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </Field>
                                     </div>
                                 </div>
                             </div>

@@ -112,6 +112,11 @@ table {
     background-color: #00EBC5;
 }
 
+.mui--text-accent {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
 /**
  * Content CSS Modal
  */
