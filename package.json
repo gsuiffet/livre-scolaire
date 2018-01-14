@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=dev webpack && node server.js",
-    "build": "webpack && node server.js"
+    "start": "webpack && node server.js"
   },
   "author": "Suiffet Guillaume",
   "license": "ISC",
