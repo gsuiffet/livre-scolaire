@@ -1,6 +1,5 @@
 var React = require('react');
 var connect = require('react-redux').connect;
-
 import css from './src/styles.css'
 
 var Header = require('./components/header.js');
