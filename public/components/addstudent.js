@@ -9,29 +9,29 @@ class AddStudent extends React.Component {
     }
     render() {
             return (
-            <div id="addStudent">
+            <div id="addStudentForm">
                 <form onSubmit={this.props.handleSubmit} className="mui-form--inline">
                     <label>
-                        <div className="mui-col-xs-12 mui-col-md-12">
+                        <div className="mui-col-xs-12 mui-col-md-12" id="addStudent">
                             <div className="mui-col-xs-4 mui-col-md-4">
-                                <div className="mui-col-xs-6 mui-col-md-6">
+                                <div className="mui-col-xs-12 mui-col-md-6">
                                     <div className="mui-textfield">
                                         <Field type="text" name="name" id="inputName" placeholder="Prenom" component="input"/>
                                     </div>
                                 </div>
-                                <div className="mui-col-xs-6 mui-col-md-6">
+                                <div className="mui-col-xs-12 mui-col-md-6">
                                     <div className="mui-textfield">
                                         <Field type="text" name="lastname" id="inputLastname" placeholder="Nom" component="input"/>
                                     </div>
                                 </div>
                             </div>
                             <div className="mui-col-xs-4 mui-col-md-4">
-                                <div className="mui-col-xs-6 mui-col-md-6">
+                                <div className="mui-col-xs-12 mui-col-md-6">
                                     <div className="mui-textfield">
                                         <Field type="number" name="password" id="inputPassword" placeholder="Code" component="input"/>
                                     </div>
                                 </div>
-                                <div className="mui-col-xs-6 mui-col-md-6">
+                                <div className="mui-col-xs-12 mui-col-md-6">
                                     <div className="mui-select">
                                         <Field type="text" name="level"  id="inputLevel" placeholder="Niveau" component="select">
                                             <option>Rang</option>

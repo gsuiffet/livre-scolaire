@@ -66,11 +66,16 @@ table {
  * Content CSS AddStudent
  */
 
-#addStudent {
-    height: 70px;
-    background-color: #00EBC5;
+#addStudentForm {
     margin-left: -15px;
     margin-right: -15px;
+}
+
+#addStudent {
+    height: 100%;
+    background-color: #00EBC5;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 #inputName {
@@ -143,9 +148,15 @@ footer {
 }
 
 /* Smartphones in landscape mode (480-768px) */
-@media only screen and ( min-width: 480px) and ( max-width: 600px) {
+@media only screen and ( min-width: 480px) and ( max-width: 768px) {
     .updateStudent {
         height: 435px;
+    }
+    #inputLastname {
+        margin-left: -15px;
+    }
+    #inputSubmit {
+        margin-top: 40px;
     }
 }
 
@@ -153,5 +164,11 @@ footer {
 @media only screen and ( max-width: 479px) {
     .updateStudent {
         height: 435px;
+    }
+    #inputLastname {
+        margin-left: -15px;
+    }
+    #inputSubmit {
+        margin-top: 55px;
     }
 }

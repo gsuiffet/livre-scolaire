@@ -32,7 +32,7 @@ class App extends React.Component {
                 <div id="content-wrapper">
                     <div className="mui-container-fluid">
                         <div className="mui-row">
-                            <div className="mui-col-md-6 mui-col-md-offset-3">
+                            <div className="mui-col-md-8 mui-col-md-offset-2">
                                 <div className="mui--appbar-height"></div>
                                 <h1>Ma liste d'élèves</h1>
                                 <AddStudentXForm onSubmit={this.submit}/>
