@@ -1,5 +1,6 @@
 var React = require('react');
 var connect   = require('react-redux').connect;
+
 var UpdateStudentXForm = require('./updatestudent.js');
 
 class StudentList extends React.Component {
