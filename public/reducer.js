@@ -19,8 +19,8 @@ function student(state = [], action) {
         var allStudent = state.slice(0);
         for(var i=0; i<allStudent.length; i++ ) {
             if (state[i].id = action.id) {
-                i = state[i].id;
-                allStudent.splice(i, 1);
+                var position = state[i].id;
+                allStudent.splice(position, 1);
                 for(var j=0; j<allStudent.length; j++ ) {
                     allStudent[j].id = j
                 }
@@ -38,11 +38,11 @@ function student(state = [], action) {
         var allStudent = state.slice(0);
         for(var i=0; i<allStudent.length; i++ ) {
             if (allStudent[i].id = action.id.id) {
-                i = allStudent[i].id;
-                allStudent[i].name = action.id.name;
-                allStudent[i].lastname = action.id.lastname;
-                allStudent[i].password = action.id.password;
-                allStudent[i].level = action.id.level;
+                var position = allStudent[i].id;
+                allStudent[position].name = action.id.name;
+                allStudent[position].lastname = action.id.lastname;
+                allStudent[position].password = action.id.password;
+                allStudent[position].level = action.id.level;
                 for(var j=0; j<allStudent.length; j++ ) {
                     allStudent[j].id = j
                 }
