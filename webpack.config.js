@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const dev = process.env.NODE_ENV === "dev";
+const dev = process.env.NODE_ENV === "development";
 
 let config = {
     devtool: dev ? 'cheap-eval-source-map' : false,
