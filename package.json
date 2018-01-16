@@ -4,7 +4,7 @@
   "description": "Gestion de classe numerique",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "dev": "NODE_ENV=development webpack && node server.js",
     "start": "NODE_ENV=production webpack && node server.js"
   },
@@ -22,10 +22,13 @@
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.8",
+    "jest": "^22.1.1",
+    "react-test-renderer": "^16.2.0",
     "style-loader": "^0.19.1",
     "uglifyjs-webpack-plugin": "^1.1.6",
     "webpack": "^3.10.0"
