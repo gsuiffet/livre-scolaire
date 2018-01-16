@@ -1,6 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
-var AppX= require('./app.js');
+var App= require('./app.js');
 
 var createStore =  require('redux').createStore;
 var Provider    =  require('react-redux').Provider;
@@ -55,7 +55,7 @@ const store = createStore(reducers, ({
 
 ReactDOM.render(
     <Provider store={store}>
-        <AppX/>
+        <App/>
     </Provider>,
     document.getElementById('container')
 );
