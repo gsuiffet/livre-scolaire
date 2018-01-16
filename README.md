@@ -16,6 +16,11 @@ Development mode :
 #### node server.js
 #### npm run dev
 
+## Running the tests
+#### npm run test
+Test Dashboard & StudentList components if they're rendering correctly.<br/><br>
+Test Redux Form on AddStudent & UpdateStudent components if they're rendering correctly.
+
 ## Built With
 * [React](https://reactjs.org/)
 * [Webpack](https://webpack.js.org/)
