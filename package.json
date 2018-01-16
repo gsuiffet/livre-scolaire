@@ -4,7 +4,7 @@
   "description": "Gestion de classe numerique",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --watch",
     "dev": "NODE_ENV=development webpack && node server.js",
     "start": "NODE_ENV=production webpack && node server.js"
   },
